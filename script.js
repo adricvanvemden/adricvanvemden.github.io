@@ -19,6 +19,8 @@ updateInfo(playerName, dealerName, "", guessedWrong, false, false);
 
 
 function drawCard(card){
+    let audio = new Audio("./sound/card.mp3");
+    audio.play();
     let cardPlace = document.querySelectorAll("[data-card-" + card.value + "]");
 	let lastPlace = cardPlace[cardPlace.length- 1];
     lastPlace.appendChild(card.getHTML());
@@ -129,6 +131,18 @@ function updateInfo(playerName, dealerName, infoText, guessedWrong, nextDealer, 
         })                
        let elements = document.getElementsByClassName("dealer-info");
        elements[0].append(btn);
+
+       let audio;
+      if(document.body.className === "background-vincent"){
+        audio = new Audio('./sound/vincent-finished.mp3');
+      }
+      else if(document.body.className === "background-default"){
+        audio = new Audio('./sound/default-finished.mp3');
+      }
+       else{
+        audio = new Audio('./sound/panda-finished.mp3');
+       }
+       audio.play();
     }
 }
 
