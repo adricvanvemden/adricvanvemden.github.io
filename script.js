@@ -78,6 +78,9 @@ function higherLower(cardValue, guessedValue){
         case 'K':
             actualValue = 13;
             break;
+        case 'K':
+            actualValue = 14;
+            break;
         default:
             actualValue = cardValue;
       }
