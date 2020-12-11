@@ -12,7 +12,6 @@ let playerName = players[1];
 let dealerName = players[0];
 let guessedWrong = 0;
 
-console.log(document.body.classList)
 const deck = new Deck();
 deck.shuffle();
 addClick();
@@ -44,8 +43,6 @@ function myClick(e){
 function removeClick(cardPlace, card){
     let cardPlacements = document.querySelector('[data-played-cards]');
     var data = document.querySelectorAll("[data-card-" + card.value + "]");
-    console.log(data[0])
-    console.log(cardPlace.length)
     if(cardPlace.length === 4) data[0].removeEventListener('click', myClick);
 }
 
@@ -116,7 +113,6 @@ function updateInfo(playerName, dealerName, infoText, guessedWrong, nextDealer, 
     }
     if(nextPlayer){ getNextPlayer(infoText); return;}
 
-    console.log (infoText)
     player.innerText = playerName + " pick a card!";
     dealer.innerText = "Dealer: " + dealerName;
     info.innerText = infoText;
