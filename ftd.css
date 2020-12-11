@@ -1,0 +1,99 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.background-default{
+	background: linear-gradient(-45deg, #aa3c1b, #e90b60, #0babe6, #20e7b9);
+	background-size: 400vw 400vw;
+    animation: gradient 15s ease infinite;
+}
+
+.background-vincent{
+    background-size: 150vw 100vw;
+    animation: gradient 15s ease infinite;
+    background-image: url("./img/vincent.jpg");
+}
+
+.background-panda{
+    background-image: url("./img/panda.jpg");
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.dealer-info{
+    background-color: rgba(0,0,0, .75);
+    display: flex;
+    font-size: 2vw;
+    justify-content: center;
+    color: white;
+    width: 100%;
+}
+
+.dealer-wrong{
+    padding-right: 1%;
+}
+
+.player-dealer{
+    padding-right: 20px;
+}
+
+.player-player{
+    text-align: center;
+    font-size: 4vw;
+    color: white;
+    animation: blinker 1s linear infinite;
+}
+
+.player-info{
+    position: absolute;
+    z-index: 100;
+    color: honeydew;
+    font-size: 5vw;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 2rem;
+    width: 100%;
+    background-color: rgba(0,0,0, .75);
+}
+
+.theme{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.theme-btn{
+    display: flex;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+
+}
+
+.theme-btn:hover{
+    background-color:#131111;
+    color: blanchedalmond;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

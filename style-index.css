@@ -1,0 +1,61 @@
+   
+.html, body{
+    padding: 0;
+    margin: 0;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.text{
+    text-align: center;
+    font-size: 70px;
+    color: honeydew;
+}
+
+.input{
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    text-align: center;   
+    margin-right: 10px; 
+}
+
+.input > button{
+    height: 47px;
+}
+
+.start-btn{
+    display: none;
+    min-height: 40px;
+    min-width: 200px;
+}
+
+.list{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 35px;
+    color: honeydew;
+}
+
+.list-element:hover{
+    color: grey;
+    cursor: pointer;
+}
+.wrapper{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,77 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.played-cards{
+    margin: 0;
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(13, 7%);
+    grid-template-rows: 11vw 11vw;
+    gap: .5%;
+    justify-content: center;
+    padding-top: 1%;
+}
+
+.deck{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    border-radius: 5%;
+    background-color: aquamarine;
+    user-select: none;
+}
+
+.card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    background-color: whitesmoke;
+    top: 10%;
+    animation-name: fade;
+    animation-duration: 1s;
+    z-index: 1;
+}
+
+.card.red{
+    color: red;
+}
+
+.card.black{
+    color: black;
+}
+
+.card::before,
+.card::after{
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1.5vw;
+}
+
+.card::before{
+    top: .5rem;
+    left: .5rem;
+}
+
+.card::after{
+    bottom: .5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+   }
