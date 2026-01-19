@@ -155,5 +155,25 @@
             ],
             "link": "https://clinishift.com/"
         }
+    ],
+    "quotes": [
+        {
+            "text": "Working with Adric feels effortless, like two peas in a pod.",
+            "author": "Jelmer V.",
+            "section": "experience",
+            "index": 0
+        },
+        {
+            "text": "Despite facing significant personal and global challenges, Adric successfully developed an online portal and delivered code beyond our expected standards.",
+            "author": "Ross C.",
+            "section": "experience",
+            "index": 1
+        },
+        {
+            "text": "Adric is committed and acts with conviction",
+            "author": "Sarah M.",
+            "section": "projects",
+            "index": 2
+        }
     ]
 }

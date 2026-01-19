@@ -1,4 +1,3 @@
-
 // Select all section elements and navigation links
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
@@ -41,68 +40,57 @@ fetch('./data.json')
     .then((response) => response.json())
     .then((data) => {
 
-        // Experience Section
-        const experienceContainer = document.getElementById('experience-container');
+        // Dynamically generate cards with quotes in between
+        function generateCardsWithQuotes(items, quotes, containerId) {
+            const container = document.getElementById(containerId);
 
-        data.experience.forEach((job) => {
-            const card = document.createElement('div');
-            card.classList.add('card');
+            items.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.classList.add('card');
 
-            const highlights = job.highlights.map((highlight) => `<li>${highlight}</li>`).join('');
+                let content = '';
 
-            const content = `
-        <div>${job.year}</div>
-        <div>
-            <h4>
-                ${job.link ? `
-                <a href="${job.link}" target="_blank"> ${job.title} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                    class="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/>
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                </a>` :
-                `${job.title}`}
-            </h4>
-            <p>${job.description}</p>
-            ${highlights ? `<ul>${highlights}</ul>` : ''}
-            <div class="tags">
-                ${job.tags.map((tag) => `<div class="tag">${tag}</div>`).join('')}
-            </div>
-        </div>
-      `;
+                const highlights = item.highlights?.map((highlight) => `<li>${highlight}</li>`).join('');
+                content = `
+                ${item.year ? `<div>${item.year}</div>` : ''}
+                <div>
+                    <h4>
+                        ${item.link ? `<a href="${item.link}" target="_blank"> ${item.title} <img src="external-link.svg" alt="GitHub Icon" width="16" height="16"></a>` : `${item.title}`}
+                    </h4>
+                    <p>${item.description}</p>
+                    ${highlights ? `<ul>${highlights}</ul>` : ''}
+                    <div class="tags">
+                        ${item.tags.map((tag) => `<div class="tag">${tag}</div>`).join('')}
+                    </div>
+                </div>
+            `;
 
-            card.innerHTML = content;
-            experienceContainer.appendChild(card);
-        });
+                card.innerHTML = content;
+                container.appendChild(card);
 
-        // Projects Section
-        const projectsContainer = document.getElementById('projects-container');
+                const quote = quotes.find((q) => q.index === index);
+                if (quote) {
+                    const quoteDiv = document.createElement('div');
+                    quoteDiv.classList.add('quote');
 
-        data.projects.forEach((project) => {
-            const card = document.createElement('div');
-            card.classList.add('card');
+                    const quoteContent = `
+                <blockquote>"${quote.text}"</blockquote>
+                <p>${quote.author}</p>
+            `;
 
-            const content = `
-        <div>
-            <h4>
-                ${project.link ? `
-                <a href="${project.link}" target="_blank"> ${project.title} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                    class="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/>
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                </a>` :
-                `${project.title}`}
-            </h4>
-            <p> ${project.description} </p>
-            <div class="tags">
-                ${project.tags.map((tag) => `<div class="tag">${tag}</div>`).join('')}
-            </div>
-        </div>
-      `;
+                    quoteDiv.innerHTML = quoteContent;
+                    container.appendChild(quoteDiv);
+                }
+            });
+        }
 
+        // Generate experience section with quotes
+        const experienceQuotes = data.quotes.filter((quote) => quote.section === 'experience');
+        generateCardsWithQuotes(data.experience, experienceQuotes, 'experience-container');
 
-            card.innerHTML = content;
-            projectsContainer.appendChild(card);
-        });
+        // Generate projects section with quotes
+        const projectQuotes = data.quotes.filter((quote) => quote.section === 'projects');
+        generateCardsWithQuotes(data.projects, projectQuotes, 'projects-container');
 
     })
     .catch((error) => console.error('Error loading project data:', error));
