@@ -1,5 +1,19 @@
 {
     "projects": [
+                {
+            "title": "Live Collaboration Docs",
+            "description": "Under construction! A real-time collaborative document editor built with TypeScript, Next.js, and Yjs. This application allows multiple users to edit documents simultaneously, with changes synchronized in real-time using WebSocket and WEBRTC technologies. The interface is styled with TailwindCSS for a clean and responsive user experience. Complete with offline support and Google Calendar integration for seamless scheduling and collaboration.",
+            "tags": [
+                "TypeScript",
+                "Next.js",
+                "React",
+                "TailwindCSS",
+                "WebSocket",
+                "WEBRTC",
+                "Yjs"
+            ],
+            "link": ""
+        },
         {
             "title": "Minecraft",
             "description": "A simplified 3D Minecraft clone built with JavaScript and Three.js, allowing players to explore a blocky world, mine resources, and build structures. This project demonstrates fundamental game development concepts, user input handling, and basic simulation.",
