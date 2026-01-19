@@ -1,0 +1,145 @@
+{
+    "projects": [
+        {
+            "title": "Minecraft",
+            "description": "A simplified 3D Minecraft clone built with JavaScript and Three.js, allowing players to explore a blocky world, mine resources, and build structures. This project demonstrates fundamental game development concepts, user input handling, and basic simulation.",
+            "tags": [
+                "JavaScript",
+                "Three.js",
+                "HTML",
+                "CSS",
+                "3D"
+            ],
+            "link": "https://adricvanvemden.github.io/minecraft-js/"
+        },
+        {
+            "title": "Crossy road",
+            "description": "Inspired by the popular mobile game Crossy Road, this 3D endless runner game challenges players to navigate a character across busy roads while avoiding traffic. Built using Three.js for 3D rendering and TypeScript for robust game logic, the game features simple controls and endless gameplay.",
+            "tags": [
+                "TypeScript",
+                "Three.js",
+                "HTML",
+                "CSS",
+                "3D"
+            ],
+            "link": "https://adricvanvemden.github.io/crossy-road/"
+        },
+        {
+            "title": "2048",
+            "description": "A web-based version of the classic 2048 game, developed using TypeScript and React for a seamless user experience. The game features a responsive design with TailwindCSS, allowing players to enjoy the addictive tile-merging gameplay on any device.",
+            "tags": [
+                "TypeScript",
+                "TailwindCSS",
+                "React",
+                "HTML",
+                "CSS",
+                "2D"
+            ],
+            "link": "https://adricvanvemden.github.io/2048/"
+        },
+        {
+            "title": "Fractal shader",
+            "description": "A mesmerizing fractal shader created with WGSL and TypeScript, showcasing intricate patterns and vibrant colors. This project explores the mathematical beauty of fractals through real-time rendering, allowing users to interactively explore the infinite complexity of fractal designs.",
+            "tags": [
+                "WGSL",
+                "TypeScript",
+                "WebGPU"
+            ],
+            "link": "https://adricvanvemden.github.io/fractal-shaders/"
+        },
+        {
+            "title": "P1 monitor",
+            "description": "An ESP32-based energy monitor that reads data from a smart meter's P1 port and sends it to a Supabase backend for storage and analysis. This open-source project utilizes C++ for firmware development and provides an efficient solution for tracking energy consumption in real-time.",
+            "tags": [
+                "C++",
+                "Supabase",
+                "ESP32",
+                "IoT",
+                "Opensource"
+            ],
+            "link": "https://github.com/adricvanvemden/p1-monitor-esp32"
+        },
+        {
+            "title": "Audio visualizer",
+            "description": "A web-based audio visualizer that creates dynamic and colorful visual effects in response to music playback. Built using JavaScript and the Web Audio API, this project analyzes audio frequencies and generates real-time graphics that sync with the rhythm and intensity of the sound.",
+            "tags": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "link": "https://adricvanvemden.github.io/audio-visualizer/"
+        },
+        {
+            "title": "GrannyB Recipes",
+            "description": "A recipe website built with TypeScript and Next.js, featuring a collection of family recipes. The site utilizes TailwindCSS for styling and offers a user-friendly interface for browsing, searching, and viewing detailed recipe instructions.",
+            "tags": [
+                "TypeScript",
+                "Next.js",
+                "React",
+                "TailwindCSS"
+            ],
+            "link": ""
+        },
+        {
+            "title": "Kings and pigs",
+            "description": "A small 2D side-scrolling game developed using JavaScript and the HTML5 Canvas API. Players control a character navigating through levels filled with obstacles, showcasing basic game mechanics and user interaction.",
+            "tags": [
+                "JavaScript",
+                "HTML",
+                "CANVAS",
+                "2D"
+            ],
+            "link": "https://adricvanvemden.github.io/kings-and-pigs/"
+        }
+    ],
+    "experience": [
+        {
+            "year": "2022 - present",
+            "title": "Frontend developer · Blue Flamingos",
+            "description": "Responsible for designing, developing, and maintaining various websites and web applications for clients across different sectors. I work closely with designers and backend developers to deliver scalable and user-friendly solutions.",
+            "highlights": [
+                "Developing reusable components, reducing development time and maintenance overhead",
+                "Actively involved in code reviews and improving frontend architecture.",
+                "Mentoring junior developers through feedback, code reviews, and knowledge sharing.",
+                "Contributing to CI/CD pipelines and automated testing."
+            ],
+            "tags": [
+                "TypeScript",
+                "React",
+                "Next.js",
+                "Node.js",
+                "C#",
+                ".NET",
+                "TailwindCSS",
+                "REST",
+                "GraphQL",
+                "Jest",
+                "Cypress",
+                "SQL",
+                "Agile",
+                "Scrum",
+                "Azure",
+                "Figma"
+            ],
+            "link": "https://blueflamingos.nl/"
+        },
+        {
+            "year": "2021 - 2022",
+            "title": "Frontend developer · CliniShift",
+            "description": "Web application for scheduling management and internal communication within healthcare institutions, designed and developed in collaboration with an international team.",
+            "highlights": [],
+            "tags": [
+                "JavaScript",
+                "Vue.js",
+                "Node.js",
+                "CSS",
+                "REST",
+                "SQL",
+                "Agile",
+                "Scrum",
+                "Figma"
+            ],
+            "link": "https://clinishift.com/"
+        }
+    ]
+}
